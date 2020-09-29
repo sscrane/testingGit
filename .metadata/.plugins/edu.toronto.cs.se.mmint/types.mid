@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="ASCII"?>
+<mid:MID xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editor="http://se.cs.toronto.edu/mmint/MID/Editor" xmlns:mid="http://se.cs.toronto.edu/mmint/MID" xmlns:operator="http://se.cs.toronto.edu/mmint/MID/Operator" xmlns:relationship="http://se.cs.toronto.edu/mmint/MID/Relationship" xsi:schemaLocation="http://se.cs.toronto.edu/mmint/MID/Editor http://se.cs.toronto.edu/mmint/MID#//editor http://se.cs.toronto.edu/mmint/MID/Operator http://se.cs.toronto.edu/mmint/MID#//operator http://se.cs.toronto.edu/mmint/MID/Relationship http://se.cs.toronto.edu/mmint/MID#//relationship" level="TYPES">
+  <models uri="http://se.cs.toronto.edu/mmint/Model" name="Model" level="TYPES" abstract="true" fileExtension="xmi" editors="//@editors.0">
+    <modelElems uri="http://se.cs.toronto.edu/mmint/Model#//ModelElement" name="ModelElement" level="TYPES">
+      <eInfo className="ModelElement"/>
+    </modelElems>
+  </models>
+  <models supertype="//@models.0" uri="http://se.cs.toronto.edu/mmint/MID" name="MID" level="TYPES" fileExtension="mid" editors="//@editors.3 //@editors.4"/>
+  <models supertype="//@models.0" uri="http://se.cs.toronto.edu/modelepedia/ClassDiagram" name="ClassDiagram" level="TYPES" fileExtension="classdiagram" editors="//@editors.5 //@editors.7 //@editors.10"/>
+  <models supertype="//@models.0" uri="http://se.cs.toronto.edu/modelepedia/SequenceDiagram" name="SequenceDiagram" level="TYPES" fileExtension="sequencediagram" editors="//@editors.8 //@editors.11"/>
+  <models supertype="//@models.0" uri="http://se.cs.toronto.edu/modelepedia/StateMachine" name="StateMachine" level="TYPES" fileExtension="statemachine" editors="//@editors.6 //@editors.9 //@editors.12"/>
+  <models supertype="//@models.0" uri="http://www.eclipse.org/emf/2002/Ecore" name="Ecore" level="TYPES" fileExtension="ecore" editors="//@editors.13"/>
+  <models supertype="//@models.1" uri="http://se.cs.toronto.edu/mmint/MIDRel" name="MIDRel" level="TYPES" fileExtension="mid" editors="//@editors.14 //@editors.15">
+    <constraint implementation="edu.toronto.cs.se.mmint.mid.constraint.MIDRelConstraint" language="java"/>
+  </models>
+  <models xsi:type="relationship:ModelRel" supertype="//@models.0" uri="http://se.cs.toronto.edu/mmint/ModelRel" name="ModelRel" level="TYPES" fileExtension="relationship">
+    <modelEndpoints uri="http://se.cs.toronto.edu/mmint/ModelRel-Model/ModelEndpoint" name="ModelEndpoint" level="TYPES" upperBound="-1" target="//@models.0"/>
+    <mappings uri="http://se.cs.toronto.edu/mmint/ModelRel/Mapping" name="Mapping" level="TYPES" modelElemEndpointRefs="//@models.7/@mappingRefs.0/@modelElemEndpointRefs.0">
+      <modelElemEndpoints uri="http://se.cs.toronto.edu/mmint/ModelRel/Mapping-ModelElem/ModelElemEndpoint" name="ModelElemEndpoint" level="TYPES" upperBound="-1" target="//@models.0/@modelElems.0"/>
+    </mappings>
+    <modelEndpointRefs referencedObject="//@models.7/@modelEndpoints.0" modifiable="true">
+      <modelElemRefs referencedObject="//@models.0/@modelElems.0" modifiable="true" modelElemEndpointRefs="//@models.7/@mappingRefs.0/@modelElemEndpointRefs.0"/>
+    </modelEndpointRefs>
+    <mappingRefs referencedObject="//@models.7/@mappings.0" modifiable="true">
+      <modelElemEndpointRefs referencedObject="//@models.7/@mappings.0/@modelElemEndpoints.0" modifiable="true" modelElemRef="//@models.7/@modelEndpointRefs.0/@modelElemRefs.0"/>
+    </mappingRefs>
+  </models>
+  <models xsi:type="relationship:ModelRel" supertype="//@models.7" uri="http://se.cs.toronto.edu/mmint/SliceRel" name="SliceRel" level="TYPES" fileExtension="relationship">
+    <modelEndpoints supertype="//@models.7/@modelEndpoints.0" uri="http://se.cs.toronto.edu/mmint/SliceRel-Model/ModelEndpoint" name="ModelEndpoint" level="TYPES" lowerBound="1" upperBound="1" target="//@models.0"/>
+    <mappings supertype="//@models.7/@mappings.0" uri="http://se.cs.toronto.edu/mmint/SliceRel/Add" name="Add" level="TYPES" modelElemEndpointRefs="//@models.8/@mappingRefs.0/@modelElemEndpointRefs.0">
+      <modelElemEndpoints supertype="//@models.7/@mappings.0/@modelElemEndpoints.0" uri="http://se.cs.toronto.edu/mmint/SliceRel/Add-ModelElem/AddEndpoint" name="AddEndpoint" level="TYPES" lowerBound="1" upperBound="-1" target="//@models.0/@modelElems.0"/>
+    </mappings>
+    <mappings supertype="//@models.7/@mappings.0" uri="http://se.cs.toronto.edu/mmint/SliceRel/Del" name="Del" level="TYPES" modelElemEndpointRefs="//@models.8/@mappingRefs.1/@modelElemEndpointRefs.0">
+      <modelElemEndpoints supertype="//@models.7/@mappings.0/@modelElemEndpoints.0" uri="http://se.cs.toronto.edu/mmint/SliceRel/Del-ModelElem/DelEndpoint" name="DelEndpoint" level="TYPES" lowerBound="1" upperBound="-1" target="//@models.0/@modelElems.0"/>
+    </mappings>
+    <mappings supertype="//@models.7/@mappings.0" uri="http://se.cs.toronto.edu/mmint/SliceRel/Mod" name="Mod" level="TYPES" modelElemEndpointRefs="//@models.8/@mappingRefs.2/@modelElemEndpointRefs.0">
+      <modelElemEndpoints supertype="//@models.7/@mappings.0/@modelElemEndpoints.0" uri="http://se.cs.toronto.edu/mmint/SliceRel/Mod-ModelElem/ModEndpoint" name="ModEndpoint" level="TYPES" lowerBound="1" upperBound="-1" target="//@models.0/@modelElems.0"/>
+    </mappings>
+    <mappings supertype="//@models.7/@mappings.0" uri="http://se.cs.toronto.edu/mmint/SliceRel/Revise" name="Revise" level="TYPES" modelElemEndpointRefs="//@models.8/@mappingRefs.3/@modelElemEndpointRefs.0">
+      <modelElemEndpoints supertype="//@models.7/@mappings.0/@modelElemEndpoints.0" uri="http://se.cs.toronto.edu/mmint/SliceRel/Revise-ModelElem/ReviseEndpoint" name="ReviseEndpoint" level="TYPES" lowerBound="1" upperBound="-1" target="//@models.0/@modelElems.0"/>
+    </mappings>
+    <mappings supertype="//@models.7/@mappings.0" uri="http://se.cs.toronto.edu/mmint/SliceRel/Recheck" name="Recheck" level="TYPES" modelElemEndpointRefs="//@models.8/@mappingRefs.4/@modelElemEndpointRefs.0">
+      <modelElemEndpoints supertype="//@models.7/@mappings.0/@modelElemEndpoints.0" uri="http://se.cs.toronto.edu/mmint/SliceRel/Recheck-ModelElem/RecheckEndpoint" name="RecheckEndpoint" level="TYPES" lowerBound="1" upperBound="-1" target="//@models.0/@modelElems.0"/>
+    </mappings>
+    <modelEndpointRefs referencedObject="//@models.8/@modelEndpoints.0" modifiable="true">
+      <modelElemRefs referencedObject="//@models.0/@modelElems.0" modifiable="true" modelElemEndpointRefs="//@models.8/@mappingRefs.0/@modelElemEndpointRefs.0 //@models.8/@mappingRefs.1/@modelElemEndpointRefs.0 //@models.8/@mappingRefs.2/@modelElemEndpointRefs.0 //@models.8/@mappingRefs.3/@modelElemEndpointRefs.0 //@models.8/@mappingRefs.4/@modelElemEndpointRefs.0"/>
+    </modelEndpointRefs>
+    <mappingRefs referencedObject="//@models.8/@mappings.0" modifiable="true">
+      <modelElemEndpointRefs referencedObject="//@models.8/@mappings.0/@modelElemEndpoints.0" modifiable="true" modelElemRef="//@models.8/@modelEndpointRefs.0/@modelElemRefs.0"/>
+    </mappingRefs>
+    <mappingRefs referencedObject="//@models.8/@mappings.1" modifiable="true">
+      <modelElemEndpointRefs referencedObject="//@models.8/@mappings.1/@modelElemEndpoints.0" modifiable="true" modelElemRef="//@models.8/@modelEndpointRefs.0/@modelElemRefs.0"/>
+    </mappingRefs>
+    <mappingRefs referencedObject="//@models.8/@mappings.2" modifiable="true">
+      <modelElemEndpointRefs referencedObject="//@models.8/@mappings.2/@modelElemEndpoints.0" modifiable="true" modelElemRef="//@models.8/@modelEndpointRefs.0/@modelElemRefs.0"/>
+    </mappingRefs>
+    <mappingRefs referencedObject="//@models.8/@mappings.3" modifiable="true">
+      <modelElemEndpointRefs referencedObject="//@models.8/@mappings.3/@modelElemEndpoints.0" modifiable="true" modelElemRef="//@models.8/@modelEndpointRefs.0/@modelElemRefs.0"/>
+    </mappingRefs>
+    <mappingRefs referencedObject="//@models.8/@mappings.4" modifiable="true">
+      <modelElemEndpointRefs referencedObject="//@models.8/@mappings.4/@modelElemEndpoints.0" modifiable="true" modelElemRef="//@models.8/@modelEndpointRefs.0/@modelElemRefs.0"/>
+    </mappingRefs>
+  </models>
+  <models xsi:type="relationship:ModelRel" supertype="//@models.8" uri="http://se.cs.toronto.edu/modelepedia/CDSliceRel" name="CDSliceRel" level="TYPES" fileExtension="relationship">
+    <modelEndpoints supertype="//@models.8/@modelEndpoints.0" uri="http://se.cs.toronto.edu/modelepedia/CDSliceRel-ClassDiagram/CDEndpoint" name="CDEndpoint" level="TYPES" lowerBound="1" upperBound="1" target="//@models.2"/>
+    <modelEndpointRefs referencedObject="//@models.8/@modelEndpoints.0">
+      <modelElemRefs referencedObject="//@models.0/@modelElems.0" modelElemEndpointRefs="//@models.9/@mappingRefs.0/@modelElemEndpointRefs.0 //@models.9/@mappingRefs.1/@modelElemEndpointRefs.0 //@models.9/@mappingRefs.2/@modelElemEndpointRefs.0 //@models.9/@mappingRefs.3/@modelElemEndpointRefs.0 //@models.9/@mappingRefs.4/@modelElemEndpointRefs.0"/>
+    </modelEndpointRefs>
+    <modelEndpointRefs referencedObject="//@models.9/@modelEndpoints.0" supertypeRef="//@models.9/@modelEndpointRefs.0" modifiable="true"/>
+    <mappingRefs referencedObject="//@models.8/@mappings.0">
+      <modelElemEndpointRefs referencedObject="//@models.8/@mappings.0/@modelElemEndpoints.0" modelElemRef="//@models.9/@modelEndpointRefs.0/@modelElemRefs.0"/>
+    </mappingRefs>
+    <mappingRefs referencedObject="//@models.8/@mappings.1">
+      <modelElemEndpointRefs referencedObject="//@models.8/@mappings.1/@modelElemEndpoints.0" modelElemRef="//@models.9/@modelEndpointRefs.0/@modelElemRefs.0"/>
+    </mappingRefs>
+    <mappingRefs referencedObject="//@models.8/@mappings.2">
+      <modelElemEndpointRefs referencedObject="//@models.8/@mappings.2/@modelElemEndpoints.0" modelElemRef="//@models.9/@modelEndpointRefs.0/@modelElemRefs.0"/>
+    </mappingRefs>
+    <mappingRefs referencedObject="//@models.8/@mappings.3">
+      <modelElemEndpointRefs referencedObject="//@models.8/@mappings.3/@modelElemEndpoints.0" modelElemRef="//@models.9/@modelEndpointRefs.0/@modelElemRefs.0"/>
+    </mappingRefs>
+    <mappingRefs referencedObject="//@models.8/@mappings.4">
+      <modelElemEndpointRefs referencedObject="//@models.8/@mappings.4/@modelElemEndpoints.0" modelElemRef="//@models.9/@modelEndpointRefs.0/@modelElemRefs.0"/>
+    </mappingRefs>
+  </models>
+  <models xsi:type="relationship:ModelRel" supertype="//@models.8" uri="http://se.cs.toronto.edu/modelepedia/SDSliceRel" name="SDSliceRel" level="TYPES" fileExtension="relationship">
+    <modelEndpoints supertype="//@models.8/@modelEndpoints.0" uri="http://se.cs.toronto.edu/modelepedia/SDSliceRel-SequenceDiagram/SDEndpoint" name="SDEndpoint" level="TYPES" lowerBound="1" upperBound="1" target="//@models.3"/>
+    <modelEndpointRefs referencedObject="//@models.8/@modelEndpoints.0">
+      <modelElemRefs referencedObject="//@models.0/@modelElems.0" modelElemEndpointRefs="//@models.10/@mappingRefs.0/@modelElemEndpointRefs.0 //@models.10/@mappingRefs.1/@modelElemEndpointRefs.0 //@models.10/@mappingRefs.2/@modelElemEndpointRefs.0 //@models.10/@mappingRefs.3/@modelElemEndpointRefs.0 //@models.10/@mappingRefs.4/@modelElemEndpointRefs.0"/>
+    </modelEndpointRefs>
+    <modelEndpointRefs referencedObject="//@models.10/@modelEndpoints.0" supertypeRef="//@models.10/@modelEndpointRefs.0" modifiable="true"/>
+    <mappingRefs referencedObject="//@models.8/@mappings.0">
+      <modelElemEndpointRefs referencedObject="//@models.8/@mappings.0/@modelElemEndpoints.0" modelElemRef="//@models.10/@modelEndpointRefs.0/@modelElemRefs.0"/>
+    </mappingRefs>
+    <mappingRefs referencedObject="//@models.8/@mappings.1">
+      <modelElemEndpointRefs referencedObject="//@models.8/@mappings.1/@modelElemEndpoints.0" modelElemRef="//@models.10/@modelEndpointRefs.0/@modelElemRefs.0"/>
+    </mappingRefs>
+    <mappingRefs referencedObject="//@models.8/@mappings.2">
+      <modelElemEndpointRefs referencedObject="//@models.8/@mappings.2/@modelElemEndpoints.0" modelElemRef="//@models.10/@modelEndpointRefs.0/@modelElemRefs.0"/>
+    </mappingRefs>
+    <mappingRefs referencedObject="//@models.8/@mappings.3">
+      <modelElemEndpointRefs referencedObject="//@models.8/@mappings.3/@modelElemEndpoints.0" modelElemRef="//@models.10/@modelEndpointRefs.0/@modelElemRefs.0"/>
+    </mappingRefs>
+    <mappingRefs referencedObject="//@models.8/@mappings.4">
+      <modelElemEndpointRefs referencedObject="//@models.8/@mappings.4/@modelElemEndpoints.0" modelElemRef="//@models.10/@modelEndpointRefs.0/@modelElemRefs.0"/>
+    </mappingRefs>
+  </models>
+  <models xsi:type="relationship:ModelRel" supertype="//@models.8" uri="http://se.cs.toronto.edu/modelepedia/SMSliceRel" name="SMSliceRel" level="TYPES" fileExtension="relationship">
+    <modelEndpoints supertype="//@models.8/@modelEndpoints.0" uri="http://se.cs.toronto.edu/modelepedia/SMSliceRel-StateMachine/SMEndpoint" name="SMEndpoint" level="TYPES" lowerBound="1" upperBound="1" target="//@models.4"/>
+    <modelEndpointRefs referencedObject="//@models.8/@modelEndpoints.0">
+      <modelElemRefs referencedObject="//@models.0/@modelElems.0" modelElemEndpointRefs="//@models.11/@mappingRefs.0/@modelElemEndpointRefs.0 //@models.11/@mappingRefs.1/@modelElemEndpointRefs.0 //@models.11/@mappingRefs.2/@modelElemEndpointRefs.0 //@models.11/@mappingRefs.3/@modelElemEndpointRefs.0 //@models.11/@mappingRefs.4/@modelElemEndpointRefs.0"/>
+    </modelEndpointRefs>
+    <modelEndpointRefs referencedObject="//@models.11/@modelEndpoints.0" supertypeRef="//@models.11/@modelEndpointRefs.0" modifiable="true"/>
+    <mappingRefs referencedObject="//@models.8/@mappings.0">
+      <modelElemEndpointRefs referencedObject="//@models.8/@mappings.0/@modelElemEndpoints.0" modelElemRef="//@models.11/@modelEndpointRefs.0/@modelElemRefs.0"/>
+    </mappingRefs>
+    <mappingRefs referencedObject="//@models.8/@mappings.1">
+      <modelElemEndpointRefs referencedObject="//@models.8/@mappings.1/@modelElemEndpoints.0" modelElemRef="//@models.11/@modelEndpointRefs.0/@modelElemRefs.0"/>
+    </mappingRefs>
+    <mappingRefs referencedObject="//@models.8/@mappings.2">
+      <modelElemEndpointRefs referencedObject="//@models.8/@mappings.2/@modelElemEndpoints.0" modelElemRef="//@models.11/@modelEndpointRefs.0/@modelElemRefs.0"/>
+    </mappingRefs>
+    <mappingRefs referencedObject="//@models.8/@mappings.3">
+      <modelElemEndpointRefs referencedObject="//@models.8/@mappings.3/@modelElemEndpoints.0" modelElemRef="//@models.11/@modelEndpointRefs.0/@modelElemRefs.0"/>
+    </mappingRefs>
+    <mappingRefs referencedObject="//@models.8/@mappings.4">
+      <modelElemEndpointRefs referencedObject="//@models.8/@mappings.4/@modelElemEndpoints.0" modelElemRef="//@models.11/@modelEndpointRefs.0/@modelElemRefs.0"/>
+    </mappingRefs>
+  </models>
+  <models xsi:type="relationship:ModelRel" supertype="//@models.7" uri="http://se.cs.toronto.edu/mmint/Overlap" name="Overlap" level="TYPES" fileExtension="relationship">
+    <constraint implementation="edu.toronto.cs.se.mmint.operator.constraint.OverlapConstraint" language="java"/>
+    <modelEndpoints supertype="//@models.7/@modelEndpoints.0" uri="http://se.cs.toronto.edu/mmint/Overlap-Model/ModelEndpoint" name="ModelEndpoint" level="TYPES" upperBound="-1" target="//@models.0"/>
+    <mappings supertype="//@models.7/@mappings.0" uri="http://se.cs.toronto.edu/mmint/Overlap/Mapping" name="Mapping" level="TYPES" modelElemEndpointRefs="//@models.12/@mappingRefs.0/@modelElemEndpointRefs.0">
+      <modelElemEndpoints supertype="//@models.7/@mappings.0/@modelElemEndpoints.0" uri="http://se.cs.toronto.edu/mmint/Overlap/Mapping-ModelElem/ModelElemEndpoint" name="ModelElemEndpoint" level="TYPES" upperBound="-1" target="//@models.0/@modelElems.0"/>
+    </mappings>
+    <modelEndpointRefs referencedObject="//@models.12/@modelEndpoints.0" modifiable="true">
+      <modelElemRefs referencedObject="//@models.0/@modelElems.0" modifiable="true" modelElemEndpointRefs="//@models.12/@mappingRefs.0/@modelElemEndpointRefs.0"/>
+    </modelEndpointRefs>
+    <mappingRefs referencedObject="//@models.12/@mappings.0" modifiable="true">
+      <modelElemEndpointRefs referencedObject="//@models.12/@mappings.0/@modelElemEndpoints.0" modifiable="true" modelElemRef="//@models.12/@modelEndpointRefs.0/@modelElemRefs.0"/>
+    </mappingRefs>
+  </models>
+  <models xsi:type="relationship:ModelRel" supertype="//@models.7" uri="http://se.cs.toronto.edu/mmint/Overlap2" name="Overlap2" level="TYPES" fileExtension="relationship">
+    <constraint implementation="edu.toronto.cs.se.mmint.operator.constraint.Overlap2Constraint" language="java"/>
+    <modelEndpoints supertype="//@models.7/@modelEndpoints.0" uri="http://se.cs.toronto.edu/mmint/Overlap2-Model/ModelEndpoint" name="ModelEndpoint" level="TYPES" upperBound="-1" target="//@models.0"/>
+    <mappings supertype="//@models.7/@mappings.0" uri="http://se.cs.toronto.edu/mmint/Overlap2/Mapping" name="Mapping" level="TYPES" modelElemEndpointRefs="//@models.13/@mappingRefs.0/@modelElemEndpointRefs.0">
+      <modelElemEndpoints supertype="//@models.7/@mappings.0/@modelElemEndpoints.0" uri="http://se.cs.toronto.edu/mmint/Overlap2/Mapping-ModelElem/ModelElemEndpoint" name="ModelElemEndpoint" level="TYPES" upperBound="-1" target="//@models.0/@modelElems.0"/>
+    </mappings>
+    <mappings supertype="//@models.7/@mappings.0" uri="http://se.cs.toronto.edu/mmint/Overlap2/Mapping2" name="Mapping2" level="TYPES"/>
+    <modelEndpointRefs referencedObject="//@models.13/@modelEndpoints.0" modifiable="true">
+      <modelElemRefs referencedObject="//@models.0/@modelElems.0" modifiable="true" modelElemEndpointRefs="//@models.13/@mappingRefs.0/@modelElemEndpointRefs.0"/>
+    </modelEndpointRefs>
+    <mappingRefs referencedObject="//@models.13/@mappings.0" modifiable="true">
+      <modelElemEndpointRefs referencedObject="//@models.13/@mappings.0/@modelElemEndpoints.0" modifiable="true" modelElemRef="//@models.13/@modelEndpointRefs.0/@modelElemRefs.0"/>
+    </mappingRefs>
+    <mappingRefs referencedObject="//@models.13/@mappings.1" modifiable="true"/>
+  </models>
+  <editors uri="http://se.cs.toronto.edu/mmint/Model_tree" name="Ecore Reflective tree" level="TYPES" modelUri="http://se.cs.toronto.edu/mmint/Model" id="org.eclipse.emf.ecore.presentation.ReflectiveEditorID">
+    <fileExtensions>xmi</fileExtensions>
+  </editors>
+  <editors xsi:type="editor:Diagram" supertype="//@editors.0" uri="http://se.cs.toronto.edu/mmint/MID/Relationship_diagram" name="Relationship diagram" level="TYPES" modelUri="http://se.cs.toronto.edu/mmint/MID/Relationship" id="edu.toronto.cs.se.mmint.mid.relationship.diagram.part.RelationshipDiagramEditorID" wizardId="edu.toronto.cs.se.mmint.mid.relationship.diagram.part.MIDCreationWizardID">
+    <fileExtensions>relationshipdiag</fileExtensions>
+  </editors>
+  <editors supertype="//@editors.0" uri="http://se.cs.toronto.edu/mmint/MID/Relationship_tree" name="Relationship tree" level="TYPES" modelUri="http://se.cs.toronto.edu/mmint/MID/Relationship" id="edu.toronto.cs.se.mmint.mid.relationship.presentation.RelationshipEditorID" wizardId="edu.toronto.cs.se.mmint.mid.relationship.presentation.RelationshipModelWizardID">
+    <fileExtensions>relationship</fileExtensions>
+  </editors>
+  <editors xsi:type="editor:Diagram" supertype="//@editors.0" uri="http://se.cs.toronto.edu/mmint/MID_diagram" name="MID diagram" level="TYPES" modelUri="http://se.cs.toronto.edu/mmint/MID" id="edu.toronto.cs.se.mmint.mid.diagram.part.MIDDiagramEditorID" wizardId="edu.toronto.cs.se.mmint.mid.diagram.part.MIDCreationWizardID">
+    <fileExtensions>middiag</fileExtensions>
+    <fileExtensions>mid</fileExtensions>
+  </editors>
+  <editors supertype="//@editors.0" uri="http://se.cs.toronto.edu/mmint/MID_tree" name="MID tree" level="TYPES" modelUri="http://se.cs.toronto.edu/mmint/MID" id="edu.toronto.cs.se.mmint.mid.presentation.MIDEditorID" wizardId="edu.toronto.cs.se.mmint.mid.presentation.MIDModelWizardID">
+    <fileExtensions>mid</fileExtensions>
+  </editors>
+  <editors xsi:type="editor:Diagram" supertype="//@editors.0" uri="http://se.cs.toronto.edu/modelepedia/Diagram_ClassDiagram" name="ClassDiagram diagram" level="TYPES" modelUri="http://se.cs.toronto.edu/modelepedia/ClassDiagram" id="edu.toronto.cs.se.modelepedia.classdiagram.diagram.part.ClassDiagramDiagramEditorID" wizardId="edu.toronto.cs.se.modelepedia.classdiagram.diagram.part.ClassDiagramCreationWizardID">
+    <fileExtensions>classdiagramdiag</fileExtensions>
+    <fileExtensions>classdiagram</fileExtensions>
+  </editors>
+  <editors xsi:type="editor:Diagram" supertype="//@editors.0" uri="http://se.cs.toronto.edu/modelepedia/Diagram_StateMachine" name="StateMachine diagram" level="TYPES" modelUri="http://se.cs.toronto.edu/modelepedia/StateMachine" id="edu.toronto.cs.se.modelepedia.statemachine.diagram.part.StateMachineDiagramEditorID" wizardId="edu.toronto.cs.se.modelepedia.statemachine.diagram.part.StateMachineCreationWizardID">
+    <fileExtensions>statemachinediag</fileExtensions>
+    <fileExtensions>statemachine</fileExtensions>
+  </editors>
+  <editors xsi:type="editor:Diagram" supertype="//@editors.0" uri="http://se.cs.toronto.edu/modelepedia/Representation_ClassDiagram" name="ClassDiagram representation" level="TYPES" modelUri="http://se.cs.toronto.edu/modelepedia/ClassDiagram" id="edu.toronto.cs.se.modelepedia.classdiagram.design" wizardId="edu.toronto.cs.se.modelepedia.classdiagram.presentation.ClassDiagramModelWizardID">
+    <fileExtensions>aird</fileExtensions>
+    <fileExtensions>classdiagram</fileExtensions>
+  </editors>
+  <editors xsi:type="editor:Diagram" supertype="//@editors.0" uri="http://se.cs.toronto.edu/modelepedia/Representation_SequenceDiagram" name="SequenceDiagram representation" level="TYPES" modelUri="http://se.cs.toronto.edu/modelepedia/SequenceDiagram" id="edu.toronto.cs.se.modelepedia.sequencediagram.design" wizardId="edu.toronto.cs.se.modelepedia.sequencediagram.presentation.SequenceDiagramModelWizardID">
+    <fileExtensions>aird</fileExtensions>
+    <fileExtensions>sequencediagram</fileExtensions>
+  </editors>
+  <editors xsi:type="editor:Diagram" supertype="//@editors.0" uri="http://se.cs.toronto.edu/modelepedia/Representation_StateMachine" name="StateMachine representation" level="TYPES" modelUri="http://se.cs.toronto.edu/modelepedia/StateMachine" id="edu.toronto.cs.se.modelepedia.statemachine.design" wizardId="edu.toronto.cs.se.modelepedia.statemachine.presentation.StateMachineModelWizardID">
+    <fileExtensions>aird</fileExtensions>
+    <fileExtensions>statemachine</fileExtensions>
+  </editors>
+  <editors supertype="//@editors.0" uri="http://se.cs.toronto.edu/modelepedia/Tree_ClassDiagram" name="ClassDiagram tree" level="TYPES" modelUri="http://se.cs.toronto.edu/modelepedia/ClassDiagram" id="edu.toronto.cs.se.modelepedia.classdiagram.presentation.ClassDiagramEditorID" wizardId="edu.toronto.cs.se.modelepedia.classdiagram.presentation.ClassDiagramModelWizardID">
+    <fileExtensions>classdiagram</fileExtensions>
+  </editors>
+  <editors supertype="//@editors.0" uri="http://se.cs.toronto.edu/modelepedia/Tree_SequenceDiagram" name="SequenceDiagram tree" level="TYPES" modelUri="http://se.cs.toronto.edu/modelepedia/SequenceDiagram" id="edu.toronto.cs.se.modelepedia.sequencediagram.presentation.SequenceDiagramEditorID" wizardId="edu.toronto.cs.se.modelepedia.sequencediagram.presentation.SequenceDiagramModelWizardID">
+    <fileExtensions>sequencediagram</fileExtensions>
+  </editors>
+  <editors supertype="//@editors.0" uri="http://se.cs.toronto.edu/modelepedia/Tree_StateMachine" name="StateMachine tree" level="TYPES" modelUri="http://se.cs.toronto.edu/modelepedia/StateMachine" id="edu.toronto.cs.se.modelepedia.statemachine.presentation.StateMachineEditorID" wizardId="edu.toronto.cs.se.modelepedia.statemachine.presentation.StateMachineModelWizardID">
+    <fileExtensions>statemachine</fileExtensions>
+  </editors>
+  <editors supertype="//@editors.0" uri="http://www.eclipse.org/emf/2002/Ecore_tree" name="Ecore tree" level="TYPES" modelUri="http://www.eclipse.org/emf/2002/Ecore" id="org.eclipse.emf.ecore.presentation.EcoreEditorID" wizardId="org.eclipse.emf.ecore.presentation.EcoreModelWizardID">
+    <fileExtensions>ecore</fileExtensions>
+  </editors>
+  <editors xsi:type="editor:Diagram" supertype="//@editors.3" uri="http://se.cs.toronto.edu/mmint/MIDRel_diagram" name="MIDRel diagram" level="TYPES" modelUri="http://se.cs.toronto.edu/mmint/MIDRel" id="edu.toronto.cs.se.mmint.mid.diagram.part.MIDDiagramEditorID" wizardId="edu.toronto.cs.se.mmint.mid.diagram.part.MIDCreationWizardID">
+    <fileExtensions>middiag</fileExtensions>
+    <fileExtensions>mid</fileExtensions>
+  </editors>
+  <editors supertype="//@editors.4" uri="http://se.cs.toronto.edu/mmint/MIDRel_tree" name="MIDRel tree" level="TYPES" modelUri="http://se.cs.toronto.edu/mmint/MIDRel" id="edu.toronto.cs.se.mmint.mid.presentation.MIDEditorID" wizardId="edu.toronto.cs.se.mmint.mid.presentation.MIDModelWizardID">
+    <fileExtensions>mid</fileExtensions>
+  </editors>
+  <operators uri="http://se.cs.toronto.edu/mmint/Operator" name="Operator" level="TYPES" abstract="true"/>
+  <operators uri="http://se.cs.toronto.edu/mmint/Operator_AnnotateSlice" name="AnnotateSlice" level="TYPES">
+    <constraint implementation="edu.toronto.cs.se.mmint.operator.slice.AnnotateSlice$Constraint" language="java"/>
+    <inputs uri="http://se.cs.toronto.edu/mmint/Operator_AnnotateSlice-SliceRel/slice" name="slice" level="TYPES" lowerBound="1" upperBound="1" target="//@models.8"/>
+    <outputs uri="http://se.cs.toronto.edu/mmint/Operator_AnnotateSlice-Model/annotated" name="annotated" level="TYPES" lowerBound="1" upperBound="1" target="//@models.0"/>
+  </operators>
+  <operators xsi:type="operator:WorkflowOperator" uri="http://se.cs.toronto.edu/mmint/Operator_ChangeImpact" name="ChangeImpact" level="TYPES">
+    <inputs uri="http://se.cs.toronto.edu/mmint/Operator_ChangeImpact-MID/system" name="system" level="TYPES" lowerBound="1" upperBound="1" target="//@models.1"/>
+    <inputs uri="http://se.cs.toronto.edu/mmint/Operator_ChangeImpact-MID/trace" name="trace" level="TYPES" lowerBound="1" upperBound="1" target="//@models.6"/>
+    <inputs uri="http://se.cs.toronto.edu/mmint/Operator_ChangeImpact-MID/safety" name="safety" level="TYPES" lowerBound="1" upperBound="1" target="//@models.1"/>
+    <inputs uri="http://se.cs.toronto.edu/mmint/Operator_ChangeImpact-MIDRel/criterion" name="criterion" level="TYPES" lowerBound="1" upperBound="1" target="//@models.6"/>
+    <outputs uri="http://se.cs.toronto.edu/mmint/Operator_ChangeImpact-MID/safetyAnnotated" name="safetyAnnotated" level="TYPES" lowerBound="1" upperBound="1" target="//@models.1"/>
+  </operators>
+  <operators uri="http://se.cs.toronto.edu/mmint/Operator_Experiment" name="Experiment" level="TYPES">
+    <inputs uri="http://se.cs.toronto.edu/mmint/Operator_Experiment/inputs" name="inputs" level="TYPES" upperBound="-1" target="//@models.0"/>
+    <generics uri="http://se.cs.toronto.edu/mmint/Operator_Experiment/SETUP" name="SETUP" level="TYPES" lowerBound="1" upperBound="1" metatargetUri="http://se.cs.toronto.edu/mmint/WorkflowOperator"/>
+    <generics uri="http://se.cs.toronto.edu/mmint/Operator_Experiment/SAMPLES" name="SAMPLES" level="TYPES" lowerBound="1" upperBound="1" metatargetUri="http://se.cs.toronto.edu/mmint/WorkflowOperator"/>
+  </operators>
+  <operators uri="http://se.cs.toronto.edu/mmint/Operator_Filter" name="Filter" level="TYPES">
+    <constraint implementation="edu.toronto.cs.se.mmint.operator.mid.Filter$Constraint" language="java"/>
+    <inputs uri="http://se.cs.toronto.edu/mmint/Operator_Filter/mid" name="mid" level="TYPES" lowerBound="1" upperBound="1" target="//@models.1"/>
+    <outputs uri="http://se.cs.toronto.edu/mmint/Operator_Filter/filteredMid" name="filteredMid" level="TYPES" lowerBound="1" upperBound="1" target="//@models.1"/>
+    <generics uri="http://se.cs.toronto.edu/mmint/Operator_Filter/TYPE" name="TYPE" level="TYPES" lowerBound="1" upperBound="1" metatargetUri="http://se.cs.toronto.edu/mmint/Model"/>
+  </operators>
+  <operators uri="http://se.cs.toronto.edu/mmint/Operator_FilterNot" name="FilterNot" level="TYPES">
+    <constraint implementation="edu.toronto.cs.se.mmint.operator.mid.Filter$Constraint" language="java"/>
+    <inputs uri="http://se.cs.toronto.edu/mmint/Operator_FilterNot/mid" name="mid" level="TYPES" lowerBound="1" upperBound="1" target="//@models.1"/>
+    <outputs uri="http://se.cs.toronto.edu/mmint/Operator_FilterNot/filteredMid" name="filteredMid" level="TYPES" lowerBound="1" upperBound="1" target="//@models.1"/>
+    <generics uri="http://se.cs.toronto.edu/mmint/Operator_FilterNot/TYPE" name="TYPE" level="TYPES" lowerBound="1" upperBound="1" metatargetUri="http://se.cs.toronto.edu/mmint/Model"/>
+  </operators>
+  <operators xsi:type="operator:NestingOperator" uri="http://se.cs.toronto.edu/mmint/Operator_Fix" name="Fix" level="TYPES">
+    <constraint implementation="edu.toronto.cs.se.mmint.operator.propagate.Fix$Constraint" language="java"/>
+    <inputs uri="http://se.cs.toronto.edu/mmint/Operator_Fix/models" name="models" level="TYPES" lowerBound="1" upperBound="-1" target="//@models.0"/>
+    <outputs uri="http://se.cs.toronto.edu/mmint/Operator_Fix/fixedModels" name="fixedModels" level="TYPES" lowerBound="1" upperBound="-1" target="//@models.0"/>
+    <generics uri="http://se.cs.toronto.edu/mmint/Operator_Fix/FIXER" name="FIXER" level="TYPES" lowerBound="1" upperBound="1" metatargetUri="http://se.cs.toronto.edu/mmint/Operator"/>
+  </operators>
+  <operators uri="http://se.cs.toronto.edu/mmint/Operator_Identity" name="Identity" level="TYPES">
+    <inputs uri="http://se.cs.toronto.edu/mmint/Operator_Identity/model" name="model" level="TYPES" lowerBound="1" upperBound="1" target="//@models.0"/>
+    <outputs uri="http://se.cs.toronto.edu/mmint/Operator_Identity/sameModel" name="sameModel" level="TYPES" lowerBound="1" upperBound="1" target="//@models.0"/>
+  </operators>
+  <operators xsi:type="operator:WorkflowOperator" uri="http://se.cs.toronto.edu/mmint/Operator_MIDMatch" name="Match" level="TYPES">
+    <inputs uri="http://se.cs.toronto.edu/mmint/Operator_MIDMatch-MID/mid1" name="mid1" level="TYPES" lowerBound="1" upperBound="1" target="//@models.1"/>
+    <inputs uri="http://se.cs.toronto.edu/mmint/Operator_MIDMatch-MID/mid2" name="mid2" level="TYPES" lowerBound="1" upperBound="1" target="//@models.1"/>
+    <outputs uri="http://se.cs.toronto.edu/mmint/Operator_MIDMatch-MIDRel/overlap" name="overlap" level="TYPES" lowerBound="1" upperBound="1" target="//@models.6"/>
+  </operators>
+  <operators xsi:type="operator:WorkflowOperator" uri="http://se.cs.toronto.edu/mmint/Operator_MIDMerge" name="Merge" level="TYPES">
+    <inputs uri="http://se.cs.toronto.edu/mmint/Operator_MIDMerge-MIDRel/overlap" name="overlap" level="TYPES" lowerBound="1" upperBound="1" target="//@models.6"/>
+    <inputs uri="http://se.cs.toronto.edu/mmint/Operator_MIDMerge-MID/mid1" name="mid1" level="TYPES" lowerBound="1" upperBound="1" target="//@models.1"/>
+    <inputs uri="http://se.cs.toronto.edu/mmint/Operator_MIDMerge-MID/mid2" name="mid2" level="TYPES" lowerBound="1" upperBound="1" target="//@models.1"/>
+    <outputs uri="http://se.cs.toronto.edu/mmint/Operator_MIDMerge-MID/merged" name="merged" level="TYPES" lowerBound="1" upperBound="1" target="//@models.1"/>
+  </operators>
+  <operators xsi:type="operator:WorkflowOperator" uri="http://se.cs.toronto.edu/mmint/Operator_MIDSlice" name="Slice" level="TYPES">
+    <inputs uri="http://se.cs.toronto.edu/mmint/Operator_MIDSlice/mid" name="mid" level="TYPES" lowerBound="1" upperBound="1" target="//@models.1"/>
+    <inputs uri="http://se.cs.toronto.edu/mmint/Operator_MIDSlice-MIDRel/criterion" name="criterion" level="TYPES" lowerBound="1" upperBound="1" target="//@models.6"/>
+    <outputs uri="http://se.cs.toronto.edu/mmint/Operator_MIDSlice/sameMID" name="sameMID" level="TYPES" lowerBound="1" upperBound="1" target="//@models.1"/>
+    <outputs uri="http://se.cs.toronto.edu/mmint/Operator_MIDSlice-MIDRel/slice" name="slice" level="TYPES" lowerBound="1" upperBound="1" target="//@models.6"/>
+  </operators>
+  <operators xsi:type="operator:WorkflowOperator" uri="http://se.cs.toronto.edu/mmint/Operator_MIDSliceStep" name="MIDSliceStep" level="TYPES">
+    <inputs uri="http://se.cs.toronto.edu/mmint/Operator_MIDSliceStep/mid" name="mid" level="TYPES" lowerBound="1" upperBound="1" target="//@models.1"/>
+    <inputs uri="http://se.cs.toronto.edu/mmint/Operator_MIDSliceStep/criterion" name="criterion" level="TYPES" lowerBound="1" upperBound="1" target="//@models.6"/>
+    <outputs uri="http://se.cs.toronto.edu/mmint/Operator_MIDSliceStep/sameMID" name="sameMID" level="TYPES" lowerBound="1" upperBound="1" target="//@models.1"/>
+    <outputs uri="http://se.cs.toronto.edu/mmint/Operator_MIDSliceStep/slice" name="slice" level="TYPES" lowerBound="1" upperBound="1" target="//@models.6"/>
+  </operators>
+  <operators xsi:type="operator:NestingOperator" uri="http://se.cs.toronto.edu/mmint/Operator_Map" name="Map" level="TYPES">
+    <constraint implementation="edu.toronto.cs.se.mmint.operator.mid.Map$OperatorConstraint" language="java"/>
+    <inputs uri="http://se.cs.toronto.edu/mmint/Operator_Map/mids" name="mids" level="TYPES" lowerBound="1" upperBound="-1" target="//@models.1"/>
+    <outputs uri="http://se.cs.toronto.edu/mmint/Operator_Map/mappedMids" name="mappedMids" level="TYPES" lowerBound="1" upperBound="-1" target="//@models.1"/>
+    <generics uri="http://se.cs.toronto.edu/mmint/Operator_Map/MAPPER" name="MAPPER" level="TYPES" lowerBound="1" upperBound="1" metatargetUri="http://se.cs.toronto.edu/mmint/Operator"/>
+  </operators>
+  <operators uri="http://se.cs.toronto.edu/mmint/Operator_Match" name="Match" level="TYPES">
+    <constraint implementation="edu.toronto.cs.se.mmint.operator.match.Match$Constraint" language="java"/>
+    <inputs uri="http://se.cs.toronto.edu/mmint/Operator_Match-Model/model1" name="model1" level="TYPES" lowerBound="1" upperBound="1" target="//@models.0"/>
+    <inputs uri="http://se.cs.toronto.edu/mmint/Operator_Match-Model/model2" name="model2" level="TYPES" lowerBound="1" upperBound="1" target="//@models.0"/>
+    <outputs uri="http://se.cs.toronto.edu/mmint/Operator_Match-Overlap/overlap" name="overlap" level="TYPES" lowerBound="1" upperBound="1" target="//@models.12"/>
+  </operators>
+  <operators uri="http://se.cs.toronto.edu/mmint/Operator_Merge" name="Merge" level="TYPES">
+    <constraint implementation="edu.toronto.cs.se.mmint.operator.merge.Merge$Constraint" language="java"/>
+    <inputs uri="http://se.cs.toronto.edu/mmint/Operator_Merge-Overlap/overlap" name="overlap" level="TYPES" lowerBound="1" upperBound="1" target="//@models.12"/>
+    <outputs uri="http://se.cs.toronto.edu/mmint/Operator_Merge-Model/merged" name="merged" level="TYPES" lowerBound="1" upperBound="1" target="//@models.0"/>
+    <outputs uri="http://se.cs.toronto.edu/mmint/Operator_Merge-ModelRel/trace1" name="trace1" level="TYPES" lowerBound="1" upperBound="1" target="//@models.7"/>
+    <outputs uri="http://se.cs.toronto.edu/mmint/Operator_Merge-ModelRel/trace2" name="trace2" level="TYPES" lowerBound="1" upperBound="1" target="//@models.7"/>
+  </operators>
+  <operators uri="http://se.cs.toronto.edu/mmint/Operator_ModelRelComposition" name="ModelRelComposition" level="TYPES">
+    <constraint implementation="edu.toronto.cs.se.mmint.operator.merge.ModelRelComposition$Constraint" language="java"/>
+    <inputs uri="http://se.cs.toronto.edu/mmint/Operator_ModelRelComposition/rel1" name="rel1" level="TYPES" lowerBound="1" upperBound="1" target="//@models.7"/>
+    <inputs uri="http://se.cs.toronto.edu/mmint/Operator_ModelRelComposition/rel2" name="rel2" level="TYPES" lowerBound="1" upperBound="1" target="//@models.7"/>
+    <outputs uri="http://se.cs.toronto.edu/mmint/Operator_ModelRelComposition/composition" name="composition" level="TYPES" lowerBound="1" upperBound="1" target="//@models.7"/>
+  </operators>
+  <operators uri="http://se.cs.toronto.edu/mmint/Operator_ModelRelMerge" name="ModelRelMerge" level="TYPES">
+    <constraint implementation="edu.toronto.cs.se.mmint.operator.merge.ModelRelMerge$Constraint" language="java"/>
+    <inputs uri="http://se.cs.toronto.edu/mmint/Operator_ModelRelMerge/rel1" name="rel1" level="TYPES" lowerBound="1" upperBound="1" target="//@models.7"/>
+    <inputs uri="http://se.cs.toronto.edu/mmint/Operator_ModelRelMerge/rel2" name="rel2" level="TYPES" lowerBound="1" upperBound="1" target="//@models.7"/>
+    <outputs uri="http://se.cs.toronto.edu/mmint/Operator_ModelRelMerge/merged" name="merged" level="TYPES" lowerBound="1" upperBound="1" target="//@models.7"/>
+  </operators>
+  <operators uri="http://se.cs.toronto.edu/mmint/Operator_ModelRelPropagation" name="ModelRelPropagation" level="TYPES">
+    <constraint implementation="edu.toronto.cs.se.mmint.operator.propagate.ModelRelPropagation$Constraint" language="java"/>
+    <inputs uri="http://se.cs.toronto.edu/mmint/Operator_ModelRelPropagation/original" name="original" level="TYPES" lowerBound="1" upperBound="1" target="//@models.7"/>
+    <inputs uri="http://se.cs.toronto.edu/mmint/Operator_ModelRelPropagation/trace" name="trace" level="TYPES" lowerBound="1" upperBound="1" target="//@models.7"/>
+    <outputs uri="http://se.cs.toronto.edu/mmint/Operator_ModelRelPropagation/propagated" name="propagated" level="TYPES" lowerBound="1" upperBound="1" target="//@models.7"/>
+  </operators>
+  <operators uri="http://se.cs.toronto.edu/mmint/Operator_ModelRelToText" name="ModelRelToText" level="TYPES">
+    <constraint implementation="edu.toronto.cs.se.mmint.operator.patch.ModelRelToText$Constraint" language="java"/>
+    <inputs uri="http://se.cs.toronto.edu/mmint/Operator_ModelRelToText/rel" name="rel" level="TYPES" lowerBound="1" upperBound="1" target="//@models.7"/>
+  </operators>
+  <operators uri="http://se.cs.toronto.edu/mmint/Operator_Overlap2ToOverlap" name="Overlap2ToOverlap" level="TYPES">
+    <inputs uri="http://se.cs.toronto.edu/mmint/Operator_Overlap2ToOverlap-Overlap2/overlap2" name="overlap2" level="TYPES" lowerBound="1" upperBound="1" target="//@models.13"/>
+    <outputs uri="http://se.cs.toronto.edu/mmint/Operator_Overlap2ToOverlap-Overlap/overlap" name="overlap" level="TYPES" lowerBound="1" upperBound="1" target="//@models.12"/>
+  </operators>
+  <operators uri="http://se.cs.toronto.edu/mmint/Operator_OverlapToOverlap2" name="OverlapToOverlap2" level="TYPES">
+    <inputs uri="http://se.cs.toronto.edu/mmint/Operator_OverlapToOverlap2-Overlap/overlap" name="overlap" level="TYPES" lowerBound="1" upperBound="1" target="//@models.12"/>
+    <outputs uri="http://se.cs.toronto.edu/mmint/Operator_OverlapToOverlap2-Overlap2/overlap2" name="overlap2" level="TYPES" lowerBound="1" upperBound="1" target="//@models.13"/>
+  </operators>
+  <operators xsi:type="operator:NestingOperator" uri="http://se.cs.toronto.edu/mmint/Operator_Reduce" name="Reduce" level="TYPES">
+    <constraint implementation="edu.toronto.cs.se.mmint.operator.mid.Reduce$OperatorConstraint" language="java"/>
+    <inputs uri="http://se.cs.toronto.edu/mmint/Operator_Reduce/mid" name="mid" level="TYPES" lowerBound="1" upperBound="1" target="//@models.1"/>
+    <outputs uri="http://se.cs.toronto.edu/mmint/Operator_Reduce/reducedMid" name="reducedMid" level="TYPES" lowerBound="1" upperBound="1" target="//@models.1"/>
+    <generics uri="http://se.cs.toronto.edu/mmint/Operator_Reduce/ACCUMULATOR" name="ACCUMULATOR" level="TYPES" lowerBound="1" upperBound="1" metatargetUri="http://se.cs.toronto.edu/mmint/Operator"/>
+  </operators>
+  <operators uri="http://se.cs.toronto.edu/mmint/Operator_Slice" name="Slice" level="TYPES">
+    <constraint implementation="edu.toronto.cs.se.mmint.operator.slice.Slice$Constraint" language="java"/>
+    <inputs uri="http://se.cs.toronto.edu/mmint/Operator_Slice-SliceRel/criterion" name="criterion" level="TYPES" lowerBound="1" upperBound="1" target="//@models.8"/>
+    <outputs uri="http://se.cs.toronto.edu/mmint/Operator_Slice-SliceRel/slice" name="slice" level="TYPES" lowerBound="1" upperBound="1" target="//@models.8"/>
+  </operators>
+  <operators uri="http://se.cs.toronto.edu/mmint/Operator_UncheckedCast" name="UncheckedCast" level="TYPES">
+    <inputs uri="http://se.cs.toronto.edu/mmint/Operator_UncheckedCast/model" name="model" level="TYPES" lowerBound="1" upperBound="1" target="//@models.0"/>
+    <outputs uri="http://se.cs.toronto.edu/mmint/Operator_UncheckedCast/castModel" name="castModel" level="TYPES" lowerBound="1" upperBound="1" target="//@models.0"/>
+    <generics uri="http://se.cs.toronto.edu/mmint/Operator_UncheckedCast/TYPE" name="TYPE" level="TYPES" lowerBound="1" upperBound="1" metatargetUri="http://se.cs.toronto.edu/mmint/Model"/>
+  </operators>
+  <operators uri="http://se.cs.toronto.edu/mmint/Operator_Union" name="Union" level="TYPES">
+    <constraint implementation="edu.toronto.cs.se.mmint.operator.mid.Union$Constraint" language="java"/>
+    <inputs uri="http://se.cs.toronto.edu/mmint/Operator_Union/mids" name="mids" level="TYPES" lowerBound="1" upperBound="-1" target="//@models.1"/>
+    <outputs uri="http://se.cs.toronto.edu/mmint/Operator_Union/unionMid" name="unionMid" level="TYPES" lowerBound="1" upperBound="1" target="//@models.1"/>
+  </operators>
+  <operators uri="http://se.cs.toronto.edu/mmint/Operator_UntypedMatch" name="UntypedMatch" level="TYPES">
+    <constraint implementation="edu.toronto.cs.se.mmint.operator.match.UntypedMatch$Constraint" language="java"/>
+    <inputs uri="http://se.cs.toronto.edu/mmint/Operator_UntypedMatch-Model/model1" name="model1" level="TYPES" lowerBound="1" upperBound="1" target="//@models.0"/>
+    <inputs uri="http://se.cs.toronto.edu/mmint/Operator_UntypedMatch-Model/model2" name="model2" level="TYPES" lowerBound="1" upperBound="1" target="//@models.0"/>
+    <outputs uri="http://se.cs.toronto.edu/mmint/Operator_UntypedMatch-ModelRel/overlap" name="overlap" level="TYPES" lowerBound="1" upperBound="1" target="//@models.7"/>
+  </operators>
+  <operators xsi:type="operator:WorkflowOperator" supertype="//@operators.0" uri="http://se.cs.toronto.edu/mmint/WorkflowOperator" name="WorkflowOperator" level="TYPES" abstract="true"/>
+  <operators supertype="//@operators.13" uri="http://se.cs.toronto.edu/modelepedia/Operator_CDMatch" name="Match" level="TYPES">
+    <inputs supertype="//@operators.13/@inputs.0" uri="http://se.cs.toronto.edu/modelepedia/Operator_CDMatch-ClassDiagram/model1" name="model1" level="TYPES" lowerBound="1" upperBound="1" target="//@models.2"/>
+    <inputs supertype="//@operators.13/@inputs.1" uri="http://se.cs.toronto.edu/modelepedia/Operator_CDMatch-ClassDiagram/model2" name="model2" level="TYPES" lowerBound="1" upperBound="1" target="//@models.2"/>
+    <outputs supertype="//@operators.13/@outputs.0" uri="http://se.cs.toronto.edu/modelepedia/Operator_CDMatch-Overlap/overlap" name="overlap" level="TYPES" lowerBound="1" upperBound="1" target="//@models.12"/>
+  </operators>
+  <operators supertype="//@operators.22" uri="http://se.cs.toronto.edu/modelepedia/Operator_CDSlice" name="Slice" level="TYPES">
+    <inputs supertype="//@operators.22/@inputs.0" uri="http://se.cs.toronto.edu/modelepedia/Operator_CDSlice-CDSliceRel/criterion" name="criterion" level="TYPES" lowerBound="1" upperBound="1" target="//@models.9"/>
+    <outputs supertype="//@operators.22/@outputs.0" uri="http://se.cs.toronto.edu/modelepedia/Operator_CDSlice-CDSliceRel/slice" name="slice" level="TYPES" lowerBound="1" upperBound="1" target="//@models.9"/>
+  </operators>
+  <operators supertype="//@operators.22" uri="http://se.cs.toronto.edu/modelepedia/Operator_SDSlice" name="Slice" level="TYPES">
+    <inputs supertype="//@operators.22/@inputs.0" uri="http://se.cs.toronto.edu/modelepedia/Operator_SDSlice-SDSliceRel/criterion" name="criterion" level="TYPES" lowerBound="1" upperBound="1" target="//@models.10"/>
+    <outputs supertype="//@operators.22/@outputs.0" uri="http://se.cs.toronto.edu/modelepedia/Operator_SDSlice-SDSliceRel/slice" name="slice" level="TYPES" lowerBound="1" upperBound="1" target="//@models.10"/>
+  </operators>
+  <operators supertype="//@operators.22" uri="http://se.cs.toronto.edu/modelepedia/Operator_SMSlice" name="Slice" level="TYPES">
+    <inputs supertype="//@operators.22/@inputs.0" uri="http://se.cs.toronto.edu/modelepedia/Operator_SMSlice-SMSliceRel/criterion" name="criterion" level="TYPES" lowerBound="1" upperBound="1" target="//@models.11"/>
+    <outputs supertype="//@operators.22/@outputs.0" uri="http://se.cs.toronto.edu/modelepedia/Operator_SMSlice-SMSliceRel/slice" name="slice" level="TYPES" lowerBound="1" upperBound="1" target="//@models.11"/>
+  </operators>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Model" value="//@models.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/MID" value="//@models.1"/>
+  <extendibleTable key="http://se.cs.toronto.edu/modelepedia/ClassDiagram" value="//@models.2"/>
+  <extendibleTable key="http://se.cs.toronto.edu/modelepedia/SequenceDiagram" value="//@models.3"/>
+  <extendibleTable key="http://se.cs.toronto.edu/modelepedia/StateMachine" value="//@models.4"/>
+  <extendibleTable key="http://www.eclipse.org/emf/2002/Ecore" value="//@models.5"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/MIDRel" value="//@models.6"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/ModelRel" value="//@models.7"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/ModelRel-Model/ModelEndpoint" value="//@models.7/@modelEndpoints.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Model#//ModelElement" value="//@models.0/@modelElems.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/ModelRel/Mapping" value="//@models.7/@mappings.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/ModelRel/Mapping-ModelElem/ModelElemEndpoint" value="//@models.7/@mappings.0/@modelElemEndpoints.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/SliceRel" value="//@models.8"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/SliceRel-Model/ModelEndpoint" value="//@models.8/@modelEndpoints.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/SliceRel/Add" value="//@models.8/@mappings.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/SliceRel/Add-ModelElem/AddEndpoint" value="//@models.8/@mappings.0/@modelElemEndpoints.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/SliceRel/Del" value="//@models.8/@mappings.1"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/SliceRel/Del-ModelElem/DelEndpoint" value="//@models.8/@mappings.1/@modelElemEndpoints.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/SliceRel/Mod" value="//@models.8/@mappings.2"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/SliceRel/Mod-ModelElem/ModEndpoint" value="//@models.8/@mappings.2/@modelElemEndpoints.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/SliceRel/Revise" value="//@models.8/@mappings.3"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/SliceRel/Revise-ModelElem/ReviseEndpoint" value="//@models.8/@mappings.3/@modelElemEndpoints.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/SliceRel/Recheck" value="//@models.8/@mappings.4"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/SliceRel/Recheck-ModelElem/RecheckEndpoint" value="//@models.8/@mappings.4/@modelElemEndpoints.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/modelepedia/CDSliceRel" value="//@models.9"/>
+  <extendibleTable key="http://se.cs.toronto.edu/modelepedia/CDSliceRel-ClassDiagram/CDEndpoint" value="//@models.9/@modelEndpoints.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/modelepedia/SDSliceRel" value="//@models.10"/>
+  <extendibleTable key="http://se.cs.toronto.edu/modelepedia/SDSliceRel-SequenceDiagram/SDEndpoint" value="//@models.10/@modelEndpoints.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/modelepedia/SMSliceRel" value="//@models.11"/>
+  <extendibleTable key="http://se.cs.toronto.edu/modelepedia/SMSliceRel-StateMachine/SMEndpoint" value="//@models.11/@modelEndpoints.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Overlap" value="//@models.12"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Overlap-Model/ModelEndpoint" value="//@models.12/@modelEndpoints.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Overlap/Mapping" value="//@models.12/@mappings.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Overlap/Mapping-ModelElem/ModelElemEndpoint" value="//@models.12/@mappings.0/@modelElemEndpoints.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Overlap2" value="//@models.13"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Overlap2-Model/ModelEndpoint" value="//@models.13/@modelEndpoints.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Overlap2/Mapping" value="//@models.13/@mappings.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Overlap2/Mapping-ModelElem/ModelElemEndpoint" value="//@models.13/@mappings.0/@modelElemEndpoints.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Overlap2/Mapping2" value="//@models.13/@mappings.1"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Model_tree" value="//@editors.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/MID/Relationship_diagram" value="//@editors.1"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/MID/Relationship_tree" value="//@editors.2"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/MID_diagram" value="//@editors.3"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/MID_tree" value="//@editors.4"/>
+  <extendibleTable key="http://se.cs.toronto.edu/modelepedia/Diagram_ClassDiagram" value="//@editors.5"/>
+  <extendibleTable key="http://se.cs.toronto.edu/modelepedia/Diagram_StateMachine" value="//@editors.6"/>
+  <extendibleTable key="http://se.cs.toronto.edu/modelepedia/Representation_ClassDiagram" value="//@editors.7"/>
+  <extendibleTable key="http://se.cs.toronto.edu/modelepedia/Representation_SequenceDiagram" value="//@editors.8"/>
+  <extendibleTable key="http://se.cs.toronto.edu/modelepedia/Representation_StateMachine" value="//@editors.9"/>
+  <extendibleTable key="http://se.cs.toronto.edu/modelepedia/Tree_ClassDiagram" value="//@editors.10"/>
+  <extendibleTable key="http://se.cs.toronto.edu/modelepedia/Tree_SequenceDiagram" value="//@editors.11"/>
+  <extendibleTable key="http://se.cs.toronto.edu/modelepedia/Tree_StateMachine" value="//@editors.12"/>
+  <extendibleTable key="http://www.eclipse.org/emf/2002/Ecore_tree" value="//@editors.13"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/MIDRel_diagram" value="//@editors.14"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/MIDRel_tree" value="//@editors.15"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator" value="//@operators.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_AnnotateSlice" value="//@operators.1"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_AnnotateSlice-SliceRel/slice" value="//@operators.1/@inputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_AnnotateSlice-Model/annotated" value="//@operators.1/@outputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_ChangeImpact" value="//@operators.2"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_ChangeImpact-MID/system" value="//@operators.2/@inputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_ChangeImpact-MID/trace" value="//@operators.2/@inputs.1"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_ChangeImpact-MID/safety" value="//@operators.2/@inputs.2"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_ChangeImpact-MIDRel/criterion" value="//@operators.2/@inputs.3"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_ChangeImpact-MID/safetyAnnotated" value="//@operators.2/@outputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Experiment" value="//@operators.3"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Experiment/inputs" value="//@operators.3/@inputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Filter" value="//@operators.4"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Filter/mid" value="//@operators.4/@inputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Filter/filteredMid" value="//@operators.4/@outputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_FilterNot" value="//@operators.5"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_FilterNot/mid" value="//@operators.5/@inputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_FilterNot/filteredMid" value="//@operators.5/@outputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Fix" value="//@operators.6"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Fix/models" value="//@operators.6/@inputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Fix/fixedModels" value="//@operators.6/@outputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Identity" value="//@operators.7"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Identity/model" value="//@operators.7/@inputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Identity/sameModel" value="//@operators.7/@outputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_MIDMatch" value="//@operators.8"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_MIDMatch-MID/mid1" value="//@operators.8/@inputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_MIDMatch-MID/mid2" value="//@operators.8/@inputs.1"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_MIDMatch-MIDRel/overlap" value="//@operators.8/@outputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_MIDMerge" value="//@operators.9"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_MIDMerge-MIDRel/overlap" value="//@operators.9/@inputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_MIDMerge-MID/mid1" value="//@operators.9/@inputs.1"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_MIDMerge-MID/mid2" value="//@operators.9/@inputs.2"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_MIDMerge-MID/merged" value="//@operators.9/@outputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_MIDSlice" value="//@operators.10"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_MIDSlice/mid" value="//@operators.10/@inputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_MIDSlice-MIDRel/criterion" value="//@operators.10/@inputs.1"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_MIDSlice/sameMID" value="//@operators.10/@outputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_MIDSlice-MIDRel/slice" value="//@operators.10/@outputs.1"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_MIDSliceStep" value="//@operators.11"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_MIDSliceStep/mid" value="//@operators.11/@inputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_MIDSliceStep/criterion" value="//@operators.11/@inputs.1"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_MIDSliceStep/sameMID" value="//@operators.11/@outputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_MIDSliceStep/slice" value="//@operators.11/@outputs.1"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Map" value="//@operators.12"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Map/mids" value="//@operators.12/@inputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Map/mappedMids" value="//@operators.12/@outputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Match" value="//@operators.13"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Match-Model/model1" value="//@operators.13/@inputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Match-Model/model2" value="//@operators.13/@inputs.1"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Match-Overlap/overlap" value="//@operators.13/@outputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Merge" value="//@operators.14"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Merge-Overlap/overlap" value="//@operators.14/@inputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Merge-Model/merged" value="//@operators.14/@outputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Merge-ModelRel/trace1" value="//@operators.14/@outputs.1"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Merge-ModelRel/trace2" value="//@operators.14/@outputs.2"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_ModelRelComposition" value="//@operators.15"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_ModelRelComposition/rel1" value="//@operators.15/@inputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_ModelRelComposition/rel2" value="//@operators.15/@inputs.1"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_ModelRelComposition/composition" value="//@operators.15/@outputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_ModelRelMerge" value="//@operators.16"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_ModelRelMerge/rel1" value="//@operators.16/@inputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_ModelRelMerge/rel2" value="//@operators.16/@inputs.1"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_ModelRelMerge/merged" value="//@operators.16/@outputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_ModelRelPropagation" value="//@operators.17"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_ModelRelPropagation/original" value="//@operators.17/@inputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_ModelRelPropagation/trace" value="//@operators.17/@inputs.1"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_ModelRelPropagation/propagated" value="//@operators.17/@outputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_ModelRelToText" value="//@operators.18"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_ModelRelToText/rel" value="//@operators.18/@inputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Overlap2ToOverlap" value="//@operators.19"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Overlap2ToOverlap-Overlap2/overlap2" value="//@operators.19/@inputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Overlap2ToOverlap-Overlap/overlap" value="//@operators.19/@outputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_OverlapToOverlap2" value="//@operators.20"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_OverlapToOverlap2-Overlap/overlap" value="//@operators.20/@inputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_OverlapToOverlap2-Overlap2/overlap2" value="//@operators.20/@outputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Reduce" value="//@operators.21"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Reduce/mid" value="//@operators.21/@inputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Reduce/reducedMid" value="//@operators.21/@outputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Slice" value="//@operators.22"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Slice-SliceRel/criterion" value="//@operators.22/@inputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Slice-SliceRel/slice" value="//@operators.22/@outputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_UncheckedCast" value="//@operators.23"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_UncheckedCast/model" value="//@operators.23/@inputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_UncheckedCast/castModel" value="//@operators.23/@outputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Union" value="//@operators.24"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Union/mids" value="//@operators.24/@inputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Union/unionMid" value="//@operators.24/@outputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_UntypedMatch" value="//@operators.25"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_UntypedMatch-Model/model1" value="//@operators.25/@inputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_UntypedMatch-Model/model2" value="//@operators.25/@inputs.1"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_UntypedMatch-ModelRel/overlap" value="//@operators.25/@outputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/WorkflowOperator" value="//@operators.26"/>
+  <extendibleTable key="http://se.cs.toronto.edu/modelepedia/Operator_CDMatch" value="//@operators.27"/>
+  <extendibleTable key="http://se.cs.toronto.edu/modelepedia/Operator_CDMatch-ClassDiagram/model1" value="//@operators.27/@inputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/modelepedia/Operator_CDMatch-ClassDiagram/model2" value="//@operators.27/@inputs.1"/>
+  <extendibleTable key="http://se.cs.toronto.edu/modelepedia/Operator_CDMatch-Overlap/overlap" value="//@operators.27/@outputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/modelepedia/Operator_CDSlice" value="//@operators.28"/>
+  <extendibleTable key="http://se.cs.toronto.edu/modelepedia/Operator_CDSlice-CDSliceRel/criterion" value="//@operators.28/@inputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/modelepedia/Operator_CDSlice-CDSliceRel/slice" value="//@operators.28/@outputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/modelepedia/Operator_SDSlice" value="//@operators.29"/>
+  <extendibleTable key="http://se.cs.toronto.edu/modelepedia/Operator_SDSlice-SDSliceRel/criterion" value="//@operators.29/@inputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/modelepedia/Operator_SDSlice-SDSliceRel/slice" value="//@operators.29/@outputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/modelepedia/Operator_SMSlice" value="//@operators.30"/>
+  <extendibleTable key="http://se.cs.toronto.edu/modelepedia/Operator_SMSlice-SMSliceRel/criterion" value="//@operators.30/@inputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/modelepedia/Operator_SMSlice-SMSliceRel/slice" value="//@operators.30/@outputs.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_UncheckedCast/TYPE" value="//@operators.23/@generics.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Fix/FIXER" value="//@operators.6/@generics.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Map/MAPPER" value="//@operators.12/@generics.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Reduce/ACCUMULATOR" value="//@operators.21/@generics.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Filter/TYPE" value="//@operators.4/@generics.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_FilterNot/TYPE" value="//@operators.5/@generics.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Experiment/SETUP" value="//@operators.3/@generics.0"/>
+  <extendibleTable key="http://se.cs.toronto.edu/mmint/Operator_Experiment/SAMPLES" value="//@operators.3/@generics.1"/>
+</mid:MID>
