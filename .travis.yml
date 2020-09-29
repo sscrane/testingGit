@@ -1,4 +1,9 @@
 language: java
+
+install-jdk.sh
 jdk:
   - oraclejdk8
+  - oraclejdk9
+  - oraclejdk10
+  - oraclejdk11
 
