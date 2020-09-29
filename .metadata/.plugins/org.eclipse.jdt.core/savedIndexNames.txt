@@ -1,3 +1,0 @@
-INDEX VERSION 1.131+/Users/sophiecrane/Desktop/testingGit/.metadata/.plugins/org.eclipse.jdt.core
-195575231.index
-564439505.index
