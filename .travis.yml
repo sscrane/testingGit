@@ -3,5 +3,3 @@ language: java
 jdk:
  - openjdk10
 
-install: ant deps
-ant test
