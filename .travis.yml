@@ -2,4 +2,11 @@ language: java
 
 jdk:
  - openjdk10
+ - oraclejdk11
 
+before_install:
+ - cd java
+
+ant test
+script:
+ - ant test
