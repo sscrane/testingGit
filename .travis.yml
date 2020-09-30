@@ -5,5 +5,4 @@ jdk:
  - oraclejdk9
  - oraclejdk11
 
-   #install: ant deps
-   #script: ant build.xml
+
